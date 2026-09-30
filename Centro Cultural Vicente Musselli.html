@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Centro Cultural Vicente Musselli | Casa da Cultura de Valinhos</title>
+<meta name="description" content="Centro Cultural Vicente Musselli, a Casa da Cultura de Valinhos (SP): oficinas, apresentações, eventos e encontros para toda a cidade.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,800&family=Figtree:wght@400;600&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bg:#f6f8f3; --surface:#ffffff; --ink:#15251c; --muted:#4d5f54;
+  --green:#1e6b45; --green-d:#134a30; --sky:#8ec5e8; --sun:#f2b632; --red:#d9483b; --line:#d6dfd4;
+  --on-green:#ffffff;
+  box-sizing:border-box; padding-top:env(safe-area-inset-top,0px); padding-bottom:env(safe-area-inset-bottom,0px);
+}
+@media (prefers-color-scheme:dark){
+  :root:not([data-theme="light"]){--bg:#0f1a14;--surface:#16251c;--ink:#eef4ec;--muted:#a9bcaf;--green:#4bb37e;--green-d:#0b2a1a;--line:#2a3d31;--on-green:#08170e}
+}
+:root[data-theme="dark"]{--bg:#0f1a14;--surface:#16251c;--ink:#eef4ec;--muted:#a9bcaf;--green:#4bb37e;--green-d:#0b2a1a;--line:#2a3d31;--on-green:#08170e}
+html{scroll-padding-top:calc(72px + env(safe-area-inset-top,0px));scroll-behavior:smooth}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);font:400 1.05rem/1.65 Figtree,system-ui,sans-serif}
+h1,h2,h3{font-family:"Bricolage Grotesque",Figtree,sans-serif;line-height:1.05;margin:0;letter-spacing:-.02em}
+a{color:inherit}
+:focus-visible{outline:3px solid var(--sun);outline-offset:3px}
+.wrap{max-width:1080px;margin:0 auto;padding:0 20px}
+header{position:sticky;top:env(safe-area-inset-top,0px);z-index:5;background:var(--bg);border-bottom:1px solid var(--line)}
+header .wrap{display:flex;align-items:center;justify-content:space-between;gap:16px;min-height:64px;flex-wrap:wrap}
+.brand{font:800 1.05rem "Bricolage Grotesque",sans-serif;text-decoration:none}
+nav{display:flex;gap:18px;flex-wrap:wrap}
+nav a{text-decoration:none;font-weight:600;font-size:.95rem;color:var(--muted)}
+nav a:hover{color:var(--ink)}
+.hero{padding:56px 0 72px}
+.hero .wrap{display:grid;grid-template-columns:1.1fr .9fr;gap:40px;align-items:end}
+.hero h1{font-size:clamp(2.6rem,7vw,5rem);font-weight:800}
+.hero p{max-width:34em;color:var(--muted);font-size:1.15rem;margin:20px 0 28px}
+.btn{display:inline-block;padding:13px 22px;border-radius:999px;background:var(--green);color:var(--on-green);font-weight:600;text-decoration:none}
+.btn.alt{background:transparent;color:var(--ink);border:2px solid var(--ink);margin-left:8px}
+.arch{aspect-ratio:4/5;border-radius:999px 999px 14px 14px;overflow:hidden;display:grid;grid-template-columns:repeat(3,1fr);grid-template-rows:repeat(5,1fr);gap:4px;background:var(--green-d);padding:4px}
+.arch i{display:block;border-radius:6px}
+.arch i:nth-child(6n+1){background:var(--green)}
+.arch i:nth-child(6n+2){background:var(--sky)}
+.arch i:nth-child(6n+3){background:var(--sun)}
+.arch i:nth-child(6n+4){background:var(--red)}
+.arch i:nth-child(6n+5){background:#f4efe4}
+.arch i:nth-child(6n){background:var(--green)}
+.arch i:nth-child(3n+2):nth-child(odd){border-radius:50%}
+section{padding:64px 0;border-top:1px solid var(--line)}
+h2{font-size:clamp(1.9rem,4vw,2.8rem);font-weight:800;margin-bottom:20px}
+.two{display:grid;grid-template-columns:1fr 1fr;gap:40px}
+.two p{margin:0 0 14px;color:var(--muted)}
+.areas{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:0;border:1px solid var(--line);border-radius:14px;overflow:hidden;margin-top:28px}
+.areas div{padding:24px;background:var(--surface);border-right:1px solid var(--line)}
+.areas div:last-child{border-right:0}
+.areas h3{font-size:1.3rem;margin-bottom:8px}
+.areas p{margin:0;color:var(--muted);font-size:.98rem}
+.areas div::before{content:"";display:block;width:34px;height:6px;border-radius:3px;margin-bottom:16px;background:var(--c)}
+.agenda{list-style:none;margin:28px 0 0;padding:0}
+.agenda li{display:grid;grid-template-columns:96px 1fr;gap:20px;padding:18px 0;border-bottom:1px solid var(--line)}
+.agenda time{font:800 1.3rem "Bricolage Grotesque",sans-serif;color:var(--green)}
+.agenda strong{display:block}
+.agenda span{color:var(--muted);font-size:.95rem}
+.note{font-size:.9rem;color:var(--muted);margin-top:16px}
+.band{background:var(--green-d);color:#fff;border-radius:18px;padding:36px;margin-top:28px}
+.band a{color:var(--sun)}
+.band h3{font-size:1.5rem;margin-bottom:8px}
+.band p{margin:0 0 14px;color:#dbe8df;max-width:40em}
+dl{margin:0;display:grid;grid-template-columns:120px 1fr;gap:12px 20px}
+dt{font-weight:600}dd{margin:0;color:var(--muted)}
+footer{padding:32px 0 40px;border-top:1px solid var(--line);color:var(--muted);font-size:.92rem}
+@media (max-width:760px){
+  .hero .wrap,.two{grid-template-columns:1fr}
+  .arch{max-width:320px}
+  .areas div{border-right:0;border-bottom:1px solid var(--line)}
+  .agenda li{grid-template-columns:76px 1fr}
+  dl{grid-template-columns:1fr;gap:2px}dt{margin-top:10px}
+  .btn.alt{margin:10px 0 0}
+}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+</style>
+</head>
+<body>
+<header>
+  <div class="wrap">
+    <a class="brand" href="#topo">Casa da Cultura de Valinhos</a>
+    <nav aria-label="Principal">
+      <a href="#sobre">Sobre</a><a href="#atividades">Atividades</a><a href="#agenda">Agenda</a><a href="#comunidade">Comunidade</a><a href="#contato">Contato</a>
+    </nav>
+  </div>
+</header>
+
+<main id="topo">
+  <div class="hero">
+    <div class="wrap">
+      <div>
+        <h1>Centro Cultural Vicente Musselli</h1>
+        <p>A Casa da Cultura de Valinhos reúne música, dança, teatro, artes e encontros da cidade em um só lugar. Venha aprender, apresentar e assistir.</p>
+        <a class="btn" href="#agenda">Ver a agenda</a><a class="btn alt" href="#contato">Como chegar</a>
+      </div>
+      <div class="arch" aria-hidden="true">
+        <i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i>
+      </div>
+    </div>
+  </div>
+
+  <section id="sobre">
+    <div class="wrap two">
+      <h2>Um espaço da cidade, feito por quem o frequenta</h2>
+      <div>
+        <p>O Centro Cultural Vicente Musselli, conhecido como Casa da Cultura, é um equipamento cultural de Valinhos (SP). Sua fachada, coberta por um grande mural de músicos, bailarinos e artistas, já diz o que acontece lá dentro.</p>
+        <p>O espaço é ponto de encontro de alunos, ex-alunos, professores, funcionários e de todos que fazem parte da vida cultural da cidade.</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="atividades">
+    <div class="wrap">
+      <h2>O que você encontra aqui</h2>
+      <div class="areas">
+        <div style="--c:var(--sky)"><h3>Música</h3><p>Aulas, ensaios e apresentações para iniciantes e experientes.</p></div>
+        <div style="--c:var(--red)"><h3>Dança</h3><p>Turmas e espetáculos que ocupam o palco e os corredores.</p></div>
+        <div style="--c:var(--sun)"><h3>Teatro</h3><p>Oficinas, montagens e encontros para quem gosta de cena.</p></div>
+        <div style="--c:var(--green)"><h3>Artes e cultura popular</h3><p>Capoeira, artes visuais e grupos da comunidade.</p></div>
+      </div>
+      <p class="note">Modalidades, turmas e horários: substituir pela lista oficial da instituição.</p>
+    </div>
+  </section>
+
+  <section id="agenda">
+    <div class="wrap">
+      <h2>Agenda</h2>
+      <ul class="agenda">
+        <li><time>Exemplo</time><div><strong>Apresentação de fim de ano</strong><span>Alunos das oficinas no palco principal. Entrada gratuita.</span></div></li>
+        <li><time>Exemplo</time><div><strong>Roda de capoeira aberta</strong><span>Grupos convidados e demonstração para o público.</span></div></li>
+        <li><time>Exemplo</time><div><strong>Matrículas abertas</strong><span>Informações sobre vagas e documentos na secretaria.</span></div></li>
+      </ul>
+      <p class="note">Eventos ilustrativos. Trocar pelos eventos reais antes de publicar.</p>
+    </div>
+  </section>
+
+  <section id="comunidade">
+    <div class="wrap">
+      <h2>Faça parte</h2>
+      <div class="band">
+        <h3>Grupo da comunidade no Facebook</h3>
+        <p>Alunos, ex-alunos, professores e funcionários trocam avisos, fotos e lembranças no grupo do Centro Cultural. Mais de 800 membros.</p>
+        <p>Busque por <strong>Centro Cultural Vicente Musselli (Casa da Cultura Valinhos)</strong> no Facebook e peça para entrar.</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="contato">
+    <div class="wrap two">
+      <h2>Visite ou fale com a gente</h2>
+      <dl>
+        <dt>Endereço</dt><dd>[Endereço completo], Valinhos, SP</dd>
+        <dt>Horário</dt><dd>[Dias e horários de funcionamento]</dd>
+        <dt>Telefone</dt><dd>[Telefone da secretaria]</dd>
+        <dt>E-mail</dt><dd>[E-mail institucional]</dd>
+      </dl>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap">Centro Cultural Vicente Musselli (Casa da Cultura de Valinhos). Valinhos, São Paulo. Site desenvolvido como projeto acadêmico de extensão.</div>
+</footer>
+</body>
+</html>
